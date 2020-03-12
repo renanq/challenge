@@ -1,19 +1,34 @@
-<p align="center">
-    <img src="http://www.funcionalacesso.com/Images/Logo-FuncionalHealthTech.png">
-</p>
+## DESAFIO DESENVOLVEDOR
 
-## Sobre a Funcional
+Projeto criado para o desafio, referente a vaga de Desenvolvedor, da Funcional - Health Tech.
 
-Com expertise de mais de 20 anos, a Funcional
-realiza um trabalho integrado em gestão de saúde,
-que envolve milhões de vidas.
-Nosso sistema inteligente de informações permite o cruzamento de dados, com possibilidade de análises inéditas e alta capacidade de customização.
+## AUTOR
 
-Oferecemos soluções inovadoras para todo o segmento healthcare conectados à maior rede de farmácias e clínicas presente por todo o país.
+* **Renan Queiroz** - [renanq](https://github.com/renanq)
 
-Nossa equipe formada por especialistas em saúde e tecnologia confere qualidade ao processo, excelência ao atendimento e credibilidade aos resultados.
+## Tecnologias Utilizadas
+- [Node.js](https://nodejs.org/) backend
+- [MongoDB - Conta na Nuvem](https://www.mongodb.com/cloud/atlas/) Banco de Dados
+- [Git](https://git-scm.com/) Versionamento
 
-## Desafio 
+## INSTALAÇÃO E CONFIGURAÇÃO
+
+- Ter uma máquina com Node.js instalado
+- Baixar o repositorio criado no Github [desafio-folha-dirigida](https://github.com/renanq/desafio-folha-dirigida)
+- Configurar no backend o caminho do banco de dados (já configurado corretamente), no arquivo /src/server.js
+- Configurar o endereço para testes da aplicação (Está configurada para http://localhost:4000), no arquivo /src/server.js
+- rodar o comando node /src/server.js
+- acessar o endereço http://localhost:4000
+
+## GraphQL - Queries criadas
+
+- Criação de conta
+
+
+- Lista de Todas as Contas
+
+
+## Sobre o Desafio 
 
 Você deverá escolher um dos links abaixo e seguir as instruções:
 
