@@ -6,7 +6,11 @@
   "author": "<renanq@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "graphql-yoga": "^1.18.3",
-    "mongoose": "^5.9.4"
+    "mongoose": "^5.9.4",
+    "request": "^2.88.2",
+    "should": "^13.2.3"
   }
 }
