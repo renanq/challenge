@@ -4,6 +4,7 @@ const resolvers = require("./resolvers");
 const mongoose = require("mongoose");
 
 mongoose.set('useFindAndModify', false);
+
 mongoose.connect("mongodb+srv://graphql:101182@cluster0-7spmy.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true

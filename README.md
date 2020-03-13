@@ -1,31 +1,38 @@
 ## DESAFIO DESENVOLVEDOR
 
-Projeto criado para o desafio, referente a vaga de Desenvolvedor, da Funcional - Health Tech.
+Projeto criado para o [desafio](https://github.com/funcional-health/challenge/), referente a vaga de Desenvolvedor, da Funcional - Health Tech.
+
 
 ## AUTOR
 
 * **Renan Queiroz** - [renanq](https://github.com/renanq)
 
+
 ## Tecnologias Utilizadas
+
 - [Node.js](https://nodejs.org/) backend
 - [MongoDB - Conta na Nuvem](https://www.mongodb.com/cloud/atlas/) Banco de Dados
 - [Git](https://git-scm.com/) Versionamento
 
+
 ## INSTALAÇÃO E CONFIGURAÇÃO
 
 - Ter uma máquina com Node.js instalado
-- Baixar o repositorio criado no Github [desafio-folha-dirigida](https://github.com/renanq/desafio-folha-dirigida)
+- Baixar o repositorio criado no Github [chalenge](https://github.com/renanq/challenge)
 - Configurar no backend o caminho do banco de dados (já configurado corretamente), no arquivo /src/server.js
 - Configurar o endereço para testes da aplicação (Está configurada para http://localhost:4000), no arquivo /src/server.js
-- rodar o comando node /src/server.js
-- acessar o endereço http://localhost:4000
+- Rodar o comando node /src/server.js
+- Acessar o endereço http://localhost:4000 para realizar as requisições
 
-## GraphQL - Queries criadas
 
-Exemplos de entrada e saída
+## GraphQL - Queries Desenvolvidas
 
-### Criação de conta
+Exemplos de entrada e saída das queries desenvolvidas
+
+**Criação de conta**
+
 -Entrada: 
+```
 mutation {
   createConta(
     numero: 62153, 
@@ -35,7 +42,10 @@ mutation {
     id
   }
 }
+```
+
 -Saída:
+```
 {
   "data": {
     "createConta": {
@@ -43,9 +53,12 @@ mutation {
     }
   }
 }
+```
 
-### Listar Todas as Contas
+**Listar Todas as Contas**
+
 - Entrada:
+```
 {
  contas{
     id
@@ -54,7 +67,10 @@ mutation {
     cliente
   }
 }
+```
+
 -Saída:
+```
 {
   "data": {
     "contas": [
@@ -73,9 +89,12 @@ mutation {
     ]
   }
 }
+```
 
-### Dados de Uma Determinada Conta
+**Dados de Uma Determinada Conta**
+
 - Entrada:
+```
 {
   conta(numero: 40401){
     id
@@ -84,7 +103,10 @@ mutation {
     cliente
   }
 }
+```
+
 - Saída:
+```
 {
   "data": {
     "conta": {
@@ -95,15 +117,21 @@ mutation {
     }
   }
 }
+```
 
-### Apenas Saldo de Uma Determinada Conta
+**Apenas Saldo de Uma Determinada Conta**
+
 - Entrada:
+```
 {
   conta(numero: 40401){
     saldo
   }
 }
+```
+
 - Saída:
+```
 {
   "data": {
     "conta": {
@@ -111,33 +139,82 @@ mutation {
     }
   }
 }
+```
 
-### Depositar em uma conta
+**Depositar em uma conta**
 
+- Entrada:
+```
+mutation{
+  depositar(numero: 40401, valor: 60.00){
+    saldo
+  }
+}
+```
+- Saída:
+```
+{
+  "data": {
+    "depositar": {
+      "saldo": 500
+    }
+  }
+}
+```
 
-### Sacar de uma conta
+**Sacar de uma conta**
 
+- Entrada:
+```
+mutation{
+  sacar(numero: 98250, valor: 120){
+    saldo
+  }
+}
+```
 
-### Sacar de uma conta sem saldo
+-Saída:
+```
+{
+  "data": {
+    "sacar": {
+      "saldo": 105
+    }
+  }
+}
+```
 
-## Sobre o Desafio 
+**Sacar de uma conta sem saldo**
 
-Você deverá escolher um dos links abaixo e seguir as instruções:
+- Entrada:
+```
+mutation {
+  sacar(numero: 98250, valor: 300) {
+    saldo
+  }
+}
+```
 
-* [PHP](/php.md)
-* [Node.js](/node.md)
-* [C#](/csharp.md)
+- Saída:
+```
+{
+  "data": {
+    "sacar": null
+  },
+  "errors": [
+    {
+      "message": "Saldo Insuficiente",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "path": [
+        "sacar"
+      ]
+    }
+  ]
+}
+```
 
-Nós recomendamos que você tente manter o seu código o mais simples possível.
-
----
-
-Ao finalizar o desafio, envie o seu código para um novo repositório público do GitHub. Por favor, **não se esqueça** de providenciar uma pequena documentação de como levantar e testar o seu projeto.
-
-Por fim, envie o link para o seu repositório do Github para um dos e-mails abaixo: 
-
-- **Rio de Janeiro:** rfilizzola@funcionalcorp.com.br (Renato Filizzola)
-- **São Paulo:** flima@funcionalcorp.com.br (Flavio Lima)
-- **Chapecó:** aquinot@funcionalcorp.com.br(Alan Quinot)
-
-Se você precisar de qualquer informação adicional ou esclarecimento, você pode nos contatar pelos e-mails acima ou abrir uma nova issue neste repositório do GitHub.
