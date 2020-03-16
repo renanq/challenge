@@ -7,12 +7,17 @@ Projeto criado para o [desafio](https://github.com/funcional-health/challenge/),
 
 * **Renan Queiroz** - [renanq](https://github.com/renanq)
 
+Contatos: 
+-  renanq@gmail.com
+- 21 97235-2571
+
 
 ## Tecnologias Utilizadas
 
 - [Node.js](https://nodejs.org/) backend
 - [MongoDB - Conta na Nuvem](https://www.mongodb.com/cloud/atlas/) Banco de Dados
 - [Git](https://git-scm.com/) Versionamento
+- [Mocha](https://mochajs.org/) Testes Automatizados
 
 
 ## INSTALAÇÃO E CONFIGURAÇÃO

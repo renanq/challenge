@@ -8,9 +8,12 @@
   "dependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "graphql": "^14.6.0",
     "graphql-yoga": "^1.18.3",
+    "mocha": "^7.1.0",
     "mongoose": "^5.9.4",
     "request": "^2.88.2",
-    "should": "^13.2.3"
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
   }
 }
